@@ -1,0 +1,28 @@
+<div class="message">
+  <div class="upper-message">
+    <!-- 画像 -->
+    <div class="message-image">
+      <%= link_to prototype_path(prototype.id) do %>
+        <%= image_tag prototype.image, class: 'message-image' if prototype.image.attached?  %>
+      <% end %>
+    </div>
+    <!-- 投稿したタイトル -->
+    <div class="message-title">
+      <%= prototype.title %>
+    </div>
+    <!-- キャッチコピー -->
+    <div class="message-catch_copy">
+      <%= prototype.catch_copy %>
+    </div>
+    <!-- コンセプト -->
+    <div class="message-concept">
+      <%= prototype.concept %>
+    </div>
+    <!-- 投稿者 -->
+    <div class="message-user_name">
+      <%= link_to user_path(prototype.user) do %>
+        <%= prototype.user.name %>
+      <% end %>
+    </div>
+  </div>
+</div>
