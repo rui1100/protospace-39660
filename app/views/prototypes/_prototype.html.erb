@@ -8,7 +8,9 @@
     </div>
     <!-- 投稿したタイトル -->
     <div class="message-title">
-      <%= prototype.title %>
+      <%= link_to prototype_path(prototype.id) do %>
+        <%= prototype.title %>
+      <% end %>
     </div>
     <!-- キャッチコピー -->
     <div class="message-catch_copy">
